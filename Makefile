@@ -6,13 +6,13 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/02 19:17:48 by dande-je         ###   ########.org.br    #
+#    Updated: 2023/08/02 21:02:20 by dande-je         ###   ########.org.br    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 
-SRCS := ft_isalpha.c ft_isdigit.c ft_strlen.c ft_isalnum.c ft_isascii.c ft_toupper.c ft_tolower.c
+SRCS := ft_isalpha.c ft_isdigit.c ft_strlen.c ft_isalnum.c ft_isascii.c ft_toupper.c ft_tolower.c ft_strchr.c
 
 OBJS := $(SRCS:.c=.o)
 
