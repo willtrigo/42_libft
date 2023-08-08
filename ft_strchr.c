@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 20:14:49 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/07 02:14:05 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/08 02:16:31 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s && *s != c)
+	while (*s && *s != (char)c)
 		s++;
-	if (*s == c)
+	if (*s == (char)c)
 		return ((char *)s);
 	return (NULL);
 }
