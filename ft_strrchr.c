@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/08 01:44:09 by dande-je         ###   ########.org.br   */
+/*   Created: 2023/08/08 01:09:16 by dande-je          #+#    #+#             */
+/*   Updated: 2023/08/09 01:36:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-
-#endif
+	i = ft_strlen(s);
+	while (i != 0 && s[i] != (char)c)
+		i--;
+	if (s[i] == (char)c)
+		return ((char *)s + i);
+	return (NULL);
+}
