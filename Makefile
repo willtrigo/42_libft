@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/11 01:28:40 by dande-je         ###   ########.org.br    #
+#    Updated: 2023/08/11 05:21:41 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRCS := ft_isalpha.c\
 	ft_strchr.c\
 	ft_strrchr.c\
 	ft_strncmp.c\
-	ft_memset.c
+	ft_memset.c\
+	ft_strdup.c
 
 OBJS := $(SRCS:.c=.o)
 
