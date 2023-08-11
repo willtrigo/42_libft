@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 04:13:07 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/11 05:22:58 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/11 06:13:59 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(const char *s)
 {
-	int	i;
+	int		i;
 	char	*new_s;
 
 	i = 0;
