@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/12 16:28:11 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/13 23:20:28 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,16 +18,16 @@ SRCS := ft_isalpha.c\
 	ft_isalnum.c\
 	ft_isascii.c\
 	ft_isprint.c\
+	ft_memset.c\
+	ft_bzero.c\
+	ft_strlcpy.c\
+	ft_strlcat.c\
 	ft_toupper.c\
 	ft_tolower.c\
 	ft_strchr.c\
 	ft_strrchr.c\
 	ft_strncmp.c\
-	ft_memset.c\
-	ft_strdup.c\
-	ft_bzero.c\
-	ft_strlcat.c\
-	ft_strlcpy.c
+	ft_strdup.c
 
 OBJS := $(SRCS:.c=.o)
 
