@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/15 23:32:00 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/17 00:16:22 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRCS := ft_isalpha.c\
 	ft_isprint.c\
 	ft_memset.c\
 	ft_bzero.c\
+	ft_memcpy.c\
+	ft_memmove.c\
 	ft_strlcpy.c\
 	ft_strlcat.c\
 	ft_toupper.c\
