@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 23:01:53 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/17 23:18:56 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/17 23:29:33 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-
 }
