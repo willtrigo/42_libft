@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 05:23:56 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/19 07:10:12 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/20 20:28:55 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= s_len)
 		return (ft_strdup(""));
 	if (s_len - start >= len)
-		s_new = (char *) ft_calloc((len + 1), sizeof(char));
+		s_new = (char *) malloc((len + 1) * sizeof(char));
 	else
-		s_new = (char *) ft_calloc((s_len - start + 1), sizeof(char));
+		s_new = (char *) malloc((s_len - start + 1) * sizeof(char));
 	if (s_new)
 	{
 		if (len > s_len + 1)
