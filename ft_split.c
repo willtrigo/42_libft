@@ -6,12 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:35:23 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/22 01:03:20 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/22 01:48:20 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	ft_make_split(char const *s, char c, size_t i, char **split)
 {
