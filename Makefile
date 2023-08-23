@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/22 02:13:51 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/22 23:06:50 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,8 @@ SRCS := ft_isalpha.c\
 	ft_strjoin.c\
 	ft_strtrim.c\
 	ft_split.c\
-	ft_itoa.c
+	ft_itoa.c\
+	ft_strmapi.c
 
 OBJS := $(SRCS:.c=.o)
 
