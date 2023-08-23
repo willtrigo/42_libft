@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:35:23 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/22 01:48:20 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/23 02:09:28 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	ft_make_split(char const *s, char c, size_t i, char **split)
 			while (s[i] && s[i] != c)
 				i++;
 			str_len = (i - s_start) + 1;
-			str = (char *)malloc(sizeof(char) * str_len);
+			str = malloc(sizeof(char) * str_len);
 			ft_strlcpy(str, &s[s_start], str_len);
 			*(char **)(split++) = str;
 		}
@@ -65,7 +65,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nodes = ft_count_words(s, c);
-	s_split = (char **)ft_calloc((nodes), sizeof(char *));
+	s_split = ft_calloc((nodes), sizeof(char *));
 	if (!s_split)
 		return (NULL);
 	ft_make_split(s, c, 0, s_split);
