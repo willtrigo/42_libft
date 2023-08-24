@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/23 05:15:38 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/24 02:52:26 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,11 @@ SRCS := ft_isalpha.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c
 
+SRCS_BONUS := ft_lstnew.c
+
 OBJS := $(SRCS:.c=.o)
+
+OBJS_BONUS	:= $(SRCS_BONUS:.c=.o)
 
 CC := cc
 
@@ -61,16 +65,18 @@ all:	$(NAME)
 
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
+	$(AR) $(NAME) $@
 
 $(NAME):	$(OBJS)
-	$(AR) $(NAME) $(OBJS)
+
+bonus:	$(OBJS_BONUS)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
 	$(RM) $(NAME)
 
 re:	fclean all
 
-.PHONY:	all clean fclean re
+.PHONY:	all clean fclean re bonus
