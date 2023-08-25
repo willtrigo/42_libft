@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 06:37:50 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/24 06:57:31 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/25 00:57:15 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!new)
-		return ;
-	if (!lst)
+	if (new)
 	{
-		*lst = new;
-		return ;
+		if (!lst)
+			*lst = new;
+		else
+		{
+			new->next = *lst;
+			*lst = new;
+		}
 	}
-	new->next = *lst;
-	*lst = new;
 }
