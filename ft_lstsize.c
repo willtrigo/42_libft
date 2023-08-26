@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 06:51:57 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/24 07:07:10 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/25 02:23:26 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ int	ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst)
-	{
+	while (++i && lst)
 		lst = lst->next;
-		i++;
-	}
-	return (i);
+	return (--i);
 }
