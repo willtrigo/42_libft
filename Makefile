@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/24 20:49:41 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/25 01:57:52 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRCS := ft_isalpha.c\
 SRCS_BONUS := ft_lstnew.c\
 	ft_lstadd_front.c\
 	ft_lstsize.c\
-	ft_lstlast.c
+	ft_lstlast.c\
+	ft_lstadd_back.c
 
 OBJS := $(SRCS:.c=.o)
 
@@ -67,7 +68,7 @@ RM := rm -rf
 all:	$(NAME)
 
 %.o:%.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@ -g3
 	$(AR) $(NAME) $@
 
 $(NAME):	$(OBJS)
