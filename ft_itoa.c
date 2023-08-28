@@ -6,12 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 01:53:54 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/22 19:33:40 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/28 08:08:01 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_intlen(long int n)
 {
