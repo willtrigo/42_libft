@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/19 05:23:56 by dande-je          #+#    #+#             */
-/*   Updated: 2023/08/20 20:28:55 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/08/28 07:20:32 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*s_new;
 	size_t	s_len;
 
+	if (!s)
+		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_strdup(""));
 	if (s_len - start >= len)
-		s_new = (char *) malloc((len + 1) * sizeof(char));
+		s_new = malloc((len + 1) * sizeof(char));
 	else
-		s_new = (char *) malloc((s_len - start + 1) * sizeof(char));
+		s_new = malloc((s_len - start + 1) * sizeof(char));
 	if (s_new)
 	{
 		if (len > s_len + 1)
