@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/08/28 03:06:51 by dande-je         ###   ########.fr        #
+#    Updated: 2023/08/28 03:25:28 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ SRCS_BONUS := ft_lstnew_bonus.c\
 	ft_lstlast_bonus.c\
 	ft_lstadd_back_bonus.c\
 	ft_lstdelone_bonus.c\
-	ft_lstclear_bonus.c
+	ft_lstclear_bonus.c\
+	ft_lstiter_bonus.c
 
 OBJS := $(SRCS:.c=.o)
 
