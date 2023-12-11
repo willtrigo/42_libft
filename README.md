@@ -1,4 +1,4 @@
-# 🧮 42sp - Libft
+# 📚 42sp - Libft
 
 <picture>
 	<img alt="Libft" src="img/42_libft.png">
@@ -75,4 +75,6 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_strnstr](https://img.shields.io/badge/LIBFT-ft__strnstr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnstr.c)
 [![ft_strnchr](https://img.shields.io/badge/LIBFT-ft__strnchr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnchr.c)
 
-#### *note - This is an extensible library, so I may add more functions in the future.
+### Functions added after finishing the project
+
+[![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_functions_added/ft_get_next_line.c)

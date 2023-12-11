@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/12/09 23:04:13 by dande-je         ###   ########.fr        #
+#    Updated: 2023/12/11 05:08:02 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ RESET                       := \033[0m
 INCLUDES_DIR                := -I./include/
 OBJS_DIR                    := ./obj/
 SRCS_FT_CTYPE_DIR           := ./src/ft_ctype/
+SRCS_FT_FUNCTIONS_ADDED_DIR := ./src/ft_functions_added/
 SRCS_FT_LINKED_LIST_DIR     := ./src/ft_linked_list/
 SRCS_FT_NON-STANDARD_DIR    := ./src/ft_non-standard/
 SRCS_FT_STDLIB_DIR          := ./src/ft_stdlib/
@@ -56,6 +57,9 @@ SRCS_FILES                  += $(addprefix $(SRCS_FT_CTYPE_DIR), ft_isalnum.c \
 	ft_isprint.c \
 	ft_tolower.c \
 	ft_toupper.c)
+
+SRCS_FILES                  += $(addprefix $(SRCS_FT_FUNCTIONS_ADDED_DIR), ft_get_next_line.c \
+	ft_get_next_line_utils.c)
 
 SRCS_FILES                  += $(addprefix $(SRCS_FT_LINKED_LIST_DIR), ft_lstadd_back.c \
 	ft_lstadd_front.c \
