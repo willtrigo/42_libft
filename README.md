@@ -53,6 +53,11 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_strtrim](https://img.shields.io/badge/LIBFT-ft__strtrim-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_strtrim.c)
 [![ft_substr](https://img.shields.io/badge/LIBFT-ft__substr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_substr.c)
 
+### Non-standard functions - Functions added after finishing the project
+
+[![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_get_next_line/ft_get_next_line.c)
+[![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_printf/ft_printf.c)
+
 ### Functions from <stdlib.h>
 
 [![ft_atoi](https://img.shields.io/badge/LIBFT-ft__atoi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_atoi.c)
@@ -75,6 +80,4 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_strnstr](https://img.shields.io/badge/LIBFT-ft__strnstr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnstr.c)
 [![ft_strnchr](https://img.shields.io/badge/LIBFT-ft__strnchr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnchr.c)
 
-### Functions added after finishing the project
 
-[![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_functions_added/ft_get_next_line.c)

@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 06:22:34 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 05:04:15 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/12/11 06:05:32 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../../include/libft.h"
 
 void	ft_add_buf(t_buf_hist **buf_hist, t_buf_hist *buf_new)
 {

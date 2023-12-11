@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_str_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 06:08:24 by dande-je         ###   ########.fr       */
+/*   Created: 2023/11/03 07:09:05 by dande-je          #+#    #+#             */
+/*   Updated: 2023/12/11 06:43:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../../../../include/libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "ft_ctype.h"
-# include "ft_linked_list.h"
-# include "ft_non-standard.h"
-# include "ft_stdlib.h"
-# include "ft_string.h"
-# include "ft_get_next_line.h"
-# include "ft_printf.h"
+void	ft_str_add(char *str, t_line *line)
+{
+	if (line->prec >= ON)
+	{
+		while (line->prec--)
+			if (*str)
+				ft_chr_add(&line->str, ft_chr_new(*(str++)), line);
+	}
+	else
+		while (*str)
+			ft_chr_add(&line->str, ft_chr_new(*(str++)), line);
+}
 
-#endif
+int	ft_str_len(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*(str++))
+		i++;
+	return (i);
+}

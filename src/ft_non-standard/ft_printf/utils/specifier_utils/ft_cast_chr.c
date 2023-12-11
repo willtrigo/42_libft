@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_cast_chr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 06:08:24 by dande-je         ###   ########.fr       */
+/*   Created: 2023/10/04 21:33:53 by dande-je          #+#    #+#             */
+/*   Updated: 2023/12/11 06:43:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../../../../../include/libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "ft_ctype.h"
-# include "ft_linked_list.h"
-# include "ft_non-standard.h"
-# include "ft_stdlib.h"
-# include "ft_string.h"
-# include "ft_get_next_line.h"
-# include "ft_printf.h"
+void	ft_cast_chr(va_list ap, t_line *line, \
+			t_line *format, int spec)
+{
+	const int	chr = va_arg(ap, int);
 
-#endif
+	(void)spec;
+	ft_combination_head_chr(line);
+	ft_chr_add(&line->str, ft_chr_new(chr), line);
+	ft_combination_tail_chr(line);
+	ft_format_jump(format);
+}

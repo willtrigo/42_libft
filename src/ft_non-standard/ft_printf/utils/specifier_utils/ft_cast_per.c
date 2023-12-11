@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_cast_per.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 06:08:24 by dande-je         ###   ########.fr       */
+/*   Created: 2023/10/11 08:37:36 by dande-je          #+#    #+#             */
+/*   Updated: 2023/12/11 06:43:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "../../../../../include/libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "ft_ctype.h"
-# include "ft_linked_list.h"
-# include "ft_non-standard.h"
-# include "ft_stdlib.h"
-# include "ft_string.h"
-# include "ft_get_next_line.h"
-# include "ft_printf.h"
-
-#endif
+void	ft_cast_per(va_list ap, t_line *line, \
+			t_line *format, int spec)
+{
+	(void)ap;
+	(void)spec;
+	ft_chr_add(&line->str, ft_chr_new('%'), line);
+	ft_format_jump(format);
+}

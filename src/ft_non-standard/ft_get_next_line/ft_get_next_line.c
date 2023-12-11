@@ -6,14 +6,14 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 06:22:06 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 05:11:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/12/11 07:53:55 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../../include/libft.h"
 
 static char	*ft_read_buf(t_file_info *file);
-static char	*ft_print_line(t_file_info *file);
+static char	*ft_return_line(t_file_info *file);
 
 char	*get_next_line(int fd)
 {
@@ -61,10 +61,10 @@ static char	*ft_read_buf(t_file_info *file)
 	}
 	file->i++;
 	file->len++;
-	return (ft_print_line(file));
+	return (ft_return_line(file));
 }
 
-static char	*ft_print_line(t_file_info *file)
+static char	*ft_return_line(t_file_info *file)
 {
 	t_buf_hist	*buf_hist_temp;
 	char		*line;
