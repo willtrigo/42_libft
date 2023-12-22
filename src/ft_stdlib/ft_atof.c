@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:29:38 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/22 14:36:26 by dande-je         ###   ########.fr       */
+/*   Updated: 2023/12/22 16:40:30 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ double	ft_atof(const char *str)
 		str++;
 	while (ft_isdigit(*str))
 	{
-		nb = (decimal * 10) + (*str++ - '0');
+		nb = (nb * 10) + (*str++ - '0');
 		decimal = decimal * 10;
 	}
 	return (nb / decimal * sign);
