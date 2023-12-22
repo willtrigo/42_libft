@@ -62,6 +62,7 @@ The first project of the 42 curriculum. It consists of recreating various standa
 
 [![ft_atoi](https://img.shields.io/badge/LIBFT-ft__atoi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_atoi.c)
 [![ft_calloc](https://img.shields.io/badge/LIBFT-ft__calloc-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_calloc.c)
+[![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_isdouble.c)
 
 ### Functions from <string.h>
 
@@ -80,4 +81,28 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_strnstr](https://img.shields.io/badge/LIBFT-ft__strnstr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnstr.c)
 [![ft_strnchr](https://img.shields.io/badge/LIBFT-ft__strnchr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_strnchr.c)
 
+## Usage
 
+In your local repository
+
+```sh
+$ make
+```
+
+To use the library in your code you will need to include the header:
+
+```c
+#include "libft.h" 
+```
+
+When compiling your own code with `libft`, don't forget to use the flags:
+
+to create the `objects`
+```sh
+$ ... -I path/to/libft.h
+```
+
+to create the `exe`
+```sh
+$ ... -L path/to/libft.a -lft
+```

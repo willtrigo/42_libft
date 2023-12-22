@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/12/11 11:56:49 by dande-je         ###   ########.fr        #
+#    Updated: 2023/12/22 03:07:37 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ SRCS_FT_STRING_DIR             := ./src/ft_string/
 RM                             := rm -rf
 MKDIR                          := mkdir -p
 MAKE_NOPRINT                   := $(MAKE) --no-print-directory
-SLEEP                          := sleep 0.1
+SLEEP                          := sleep 0.0
 
 #******************************************************************************#
 #                                   FILES                                      #
@@ -116,7 +116,8 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_NON-STANDARD_DIR), ft_it
 	ft_strjoin.c \
 	ft_strmapi.c \
 	ft_strtrim.c \
-	ft_substr.c)
+	ft_substr.c \
+	ft_isdouble.c)
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_STDLIB_DIR), ft_atoi.c \
 	ft_calloc.c)
@@ -188,7 +189,7 @@ endef
 define comp_objs
 	$(eval COUNT=$(shell expr $(COUNT) + 1))
 	$(COMPILE_OBJS)
-	printf "$(YELLOW)[%03d%%] $(COMP_MESSAGE)\r$(RESET)\n" $$(echo $$(($(COUNT) * 100 / $(words $(OBJS)))))
+	printf "[%3d%%] $(YELLOW)$(COMP_MESSAGE)\r$(RESET)\n" $$(echo $$(($(COUNT) * 100 / $(words $(OBJS)))))
 endef
 
 define comp_lib
