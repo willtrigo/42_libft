@@ -57,12 +57,12 @@ The first project of the 42 curriculum. It consists of recreating various standa
 
 [![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_get_next_line/ft_get_next_line.c)
 [![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_printf/ft_printf.c)
+[![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_isdouble.c)
 
 ### Functions from <stdlib.h>
 
 [![ft_atoi](https://img.shields.io/badge/LIBFT-ft__atoi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_atoi.c)
 [![ft_calloc](https://img.shields.io/badge/LIBFT-ft__calloc-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_calloc.c)
-[![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_isdouble.c)
 
 ### Functions from <string.h>
 
