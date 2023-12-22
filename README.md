@@ -64,6 +64,10 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_atoi](https://img.shields.io/badge/LIBFT-ft__atoi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_atoi.c)
 [![ft_calloc](https://img.shields.io/badge/LIBFT-ft__calloc-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_calloc.c)
 
+### Functions from <stdlib.h> - Functions added after finishing the project
+
+[![ft_atof](https://img.shields.io/badge/LIBFT-ft__atof-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_stdlib/ft_atof.c)
+
 ### Functions from <string.h>
 
 [![ft_bzero](https://img.shields.io/badge/LIBFT-ft__bzero-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_string/ft_bzero.c)

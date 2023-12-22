@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/12/22 03:07:37 by dande-je         ###   ########.fr        #
+#    Updated: 2023/12/22 16:05:09 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -120,7 +120,8 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_NON-STANDARD_DIR), ft_it
 	ft_isdouble.c)
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_STDLIB_DIR), ft_atoi.c \
-	ft_calloc.c)
+	ft_calloc.c \
+	ft_atof.c)
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_STRING_DIR), ft_bzero.c \
 	ft_memchr.c \
