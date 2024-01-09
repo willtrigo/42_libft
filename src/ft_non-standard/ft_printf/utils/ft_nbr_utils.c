@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 07:00:58 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 07:55:55 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:56:56 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ t_line_chr	*ft_chr_new(char chr)
 
 void	ft_print_line(t_line *line)
 {
-	t_line_chr	*line_temp;
+	t_line_chr		*line_temp;
 	char			*line_new;
 	size_t			i;
 

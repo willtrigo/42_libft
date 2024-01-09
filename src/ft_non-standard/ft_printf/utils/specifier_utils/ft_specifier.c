@@ -6,16 +6,16 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 05:59:50 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 07:55:26 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:58:27 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../../../include/libft.h"
 
-static void						ft_parse_spec(t_line *format,
-									va_list ap, t_line *line);
+static void					ft_parse_spec(t_line *format,
+								va_list ap, t_line *line);
 static t_parse_spec_struct	ft_parse_spec_init(void);
-static void						ft_line_reset(t_line *line);
+static void					ft_line_reset(t_line *line);
 
 void	ft_get_spec(t_line *format, va_list ap, t_line *line)
 {

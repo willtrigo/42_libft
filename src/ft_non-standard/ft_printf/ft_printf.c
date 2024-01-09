@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 02:17:33 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 06:43:36 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:56:11 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	ft_get_format(t_line *line_format, const char *format);
 
 int	ft_printf(const char *format, ...)
 {
-	va_list		ap;
+	va_list	ap;
 	t_line	line;
 	t_line	line_format;
 

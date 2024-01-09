@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 05:17:51 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 07:55:55 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/09 09:55:22 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_parse_plus(t_line *format, t_line *line)
 {
-	t_line_chr	*format_next;
-
 	format_next = format->str->next;
 	line->plus = ON;
 	if (format->str->chr == '0')

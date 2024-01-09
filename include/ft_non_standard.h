@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_non-standard.h                                  :+:      :+:    :+:   */
+/*   ft_non_standard.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:14:09 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/22 02:52:16 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/09 10:00:16 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_NON_STANDARD_H
 # define FT_NON_STANDARD_H
 
-#include "libft.h"
+# include "libft.h"
 
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
