@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2023/12/22 16:05:09 by dande-je         ###   ########.fr        #
+#    Updated: 2024/01/18 14:56:15 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,29 +14,30 @@
 #                                   COLOR                                      #
 #******************************************************************************#
 
-RED                            := \033[0;31m
-GREEN                          := \033[0;32m
-YELLOW                         := \033[0;33m
-CYAN                           := \033[0;36m
-RESET                          := \033[0m
+RED                             := \033[0;31m
+GREEN                           := \033[0;32m
+YELLOW                          := \033[0;33m
+PURPLE                          := \033[0;35m
+CYAN                            := \033[0;36m
+RESET                           := \033[0m
 
 #******************************************************************************#
 #                                   PATH                                       #
 #******************************************************************************#
 
-INCLUDES_DIR                   := -I./include/
-OBJS_DIR                       := ./obj/
-SRCS_FT_CTYPE_DIR              := ./src/ft_ctype/
-SRCS_FT_LINKED_LIST_DIR        := ./src/ft_linked_list/
-SRCS_FT_NON-STANDARD_DIR       := ./src/ft_non-standard/
-SRCS_FT_GET_NEXT_LINE_DIR      := $(SRCS_FT_NON-STANDARD_DIR)ft_get_next_line/
-SRCS_FT_PRINTF_DIR             := $(SRCS_FT_NON-STANDARD_DIR)ft_printf/
+SRCS_FT_CTYPE_DIR              := src/ft_ctype/
+SRCS_FT_LINKED_LIST_DIR        := src/ft_linked_list/
+SRCS_FT_NON_STANDARD_DIR       := src/ft_non_standard/
+SRCS_FT_GET_NEXT_LINE_DIR      := $(SRCS_FT_NON_STANDARD_DIR)ft_get_next_line/
+SRCS_FT_PRINTF_DIR             := $(SRCS_FT_NON_STANDARD_DIR)ft_printf/
 SRCS_FT_PRINTF_UTILS_DIR       := $(SRCS_FT_PRINTF_DIR)utils/
 SRCS_FT_PRINTF_SPECIFIER_DIR   := $(SRCS_FT_PRINTF_DIR)utils/specifier_utils/
 SRCS_FT_PRINTF_PARSE_DIR       := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/
 SRCS_FT_PRINTF_COMBINATION_DIR := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/combination_utils/
-SRCS_FT_STDLIB_DIR             := ./src/ft_stdlib/
-SRCS_FT_STRING_DIR             := ./src/ft_string/
+SRCS_FT_STDLIB_DIR             := src/ft_stdlib/
+SRCS_FT_STRING_DIR             := src/ft_string/
+INCS                           := include/ include/ft_non_standard/
+BUILD_DIR                      := build/
 
 #******************************************************************************#
 #                               BASH COMMANDS                                  #
@@ -44,16 +45,14 @@ SRCS_FT_STRING_DIR             := ./src/ft_string/
 
 RM                             := rm -rf
 MKDIR                          := mkdir -p
-MAKE_NOPRINT                   := $(MAKE) --no-print-directory
-SLEEP                          := sleep 0.0
+MAKEFLAGS                      += --no-print-directory
+SLEEP                          := sleep 0.01
 
 #******************************************************************************#
 #                                   FILES                                      #
 #******************************************************************************#
 
 NAME                           := libft.a
-
-HEADER                         := $(INCLUDES_DIR)
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_CTYPE_DIR), ft_isalnum.c \
 	ft_isalpha.c \
@@ -106,7 +105,7 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_LINKED_LIST_DIR), ft_lst
 	ft_lstnew.c \
 	ft_lstsize.c)
 
-SRCS_FILES                     += $(addprefix $(SRCS_FT_NON-STANDARD_DIR), ft_itoa.c \
+SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_itoa.c \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
@@ -138,7 +137,7 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_STRING_DIR), ft_bzero.c 
 	ft_strnstr.c \
 	ft_strrchr.c)
 
-OBJS                           += $(SRCS_FILES:%.c=$(OBJS_DIR)%.o)
+OBJS                           += $(SRCS_FILES:%.c=$(BUILD_DIR)%.o)
 
 DEPS                           := $(OBJS:.o=.d)
 
@@ -149,34 +148,34 @@ DEPS                           := $(OBJS:.o=.d)
 COUNT                          = 0
 CLEAN_MESSAGE                  := Library Libft objects deleted
 FCLEAN_MESSAGE                 := Library Libft deleted
-LIB_MESSAGE                    = Library Libft compiled
-COMP_MESSAGE                   = Compiling library Libft
+LIB_MESSAGE                    = $(RESET)[100%%] $(GREEN)Linking C static library $(NAME)
+COMP_MESSAGE                   = Building C object
 
 #******************************************************************************#
 #                               COMPILATION                                    #
 #******************************************************************************#
 
 CC                             := cc
-CFLAGS                         = -Wall -Wextra -Werror -Ofast -MD -MP
-DFLAGS                         := -Wall -Wextra -Werror -Ofast -MD -MP -g3
-MFLAGS                         := -ldl -lglfw -pthread -lm
+CFLAGS                         = -Wall -Wextra -Werror -Ofast
+CPPFLAGS                       := $(addprefix -I,$(INCS)) -MMD -MP
+DFLAGS                         := -g3
 LFLAGS                         := -march=native
 FSANITIZE                      := -O1 -fno-omit-frame-pointer -g3
 LDFLAGS                        := -fsanitize=address
-LIB                            := ar -rcs
-COMPILE_OBJS                   = $(CC) $(CFLAGS) $(LFLAGS) -I $(HEADER) -c $< -o $@
-COMPILE_LIB                    = $(LIB) $(NAME) $(OBJS)
+AR                             := ar -rcs
+COMPILE_OBJS                   = $(CC) $(CFLAGS) $(LFLAGS) $(CPPFLAGS) -c $< -o $@
+COMPILE_LIB                    = $(AR) $(NAME) $(OBJS)
 
 #******************************************************************************#
 #                                   DEFINE                                     #
 #******************************************************************************#
 
 ifdef WITH_DEBUG
-	CFLAGS = $(DFLAGS)
+	CFLAGS += $(DFLAGS)
 endif
 
 ifdef WITH_FSANITIZE
-	COMPILE_OBJS = $(CC) $(CFLAGS) $(LFLAGS) $(FSANITIZE) -I $(HEADER) -c $< -o $@ $(LDFLAGS)
+	COMPILE_OBJS = $(CC) $(CFLAGS) $(LFLAGS) $(FSANITIZE) $(CPPFLAGS) -c $< -o $@ $(LDFLAGS)
 endif
 
 #******************************************************************************#
@@ -190,16 +189,18 @@ endef
 define comp_objs
 	$(eval COUNT=$(shell expr $(COUNT) + 1))
 	$(COMPILE_OBJS)
-	printf "[%3d%%] $(YELLOW)$(COMP_MESSAGE)\r$(RESET)\n" $$(echo $$(($(COUNT) * 100 / $(words $(OBJS)))))
+	$(SLEEP)
+	printf "[%3d%%] $(YELLOW)$(COMP_MESSAGE) $@ \r$(RESET)\n" $$(echo $$(($(COUNT) * 100 / $(words $(OBJS)))))
 endef
 
 define comp_lib
 	$(COMPILE_LIB)
-	printf "$(GREEN)$(LIB_MESSAGE)$(RESET)\n"
+	$(SLEEP)
+	printf "$(LIB_MESSAGE)$(RESET)\n"
 endef
 
 define clean
-	$(RM) $(OBJS_DIR)
+	$(RM) $(BUILD_DIR)
 	$(SLEEP)
 	printf "$(RED)$(CLEAN_MESSAGE)$(RESET)\n"
 endef
@@ -213,13 +214,13 @@ endef
 define fsanitize
 	$(call clean)
 	$(call fclean)
-	$(MAKE_NOPRINT) WITH_FSANITIZE=TRUE
+	$(MAKE) WITH_FSANITIZE=TRUE
 endef
 
 define debug
 	$(call clean)
 	$(call fclean)
-	$(MAKE_NOPRINT) WITH_DEBUG=TRUE
+	$(MAKE) WITH_DEBUG=TRUE
 endef
 
 #******************************************************************************#
@@ -228,7 +229,7 @@ endef
 
 all: $(NAME)
 
-$(OBJS_DIR)%.o: %.c
+$(BUILD_DIR)%.o: %.c
 	$(call create_dir)
 	$(call comp_objs)
 

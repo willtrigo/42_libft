@@ -6,14 +6,16 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 03:42:43 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/11 07:55:56 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:46:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 # define FAIL -1
 # define I_INIT -1

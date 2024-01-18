@@ -6,14 +6,17 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:14:09 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/09 10:00:16 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:49:13 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_NON_STANDARD_H
 # define FT_NON_STANDARD_H
 
-# include "libft.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include "ft_stdlib.h"
+# include "ft_string.h"
 
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);

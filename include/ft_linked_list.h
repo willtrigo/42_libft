@@ -6,14 +6,14 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:09:36 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/09 10:01:26 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:40:39 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LINKED_LIST_H
 # define FT_LINKED_LIST_H
 
-# include "libft.h"
+# include <stdlib.h>
 
 typedef struct s_list	t_list;
 struct s_list

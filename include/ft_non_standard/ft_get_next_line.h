@@ -6,20 +6,20 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 07:04:07 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/09 10:00:53 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:38:52 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_GET_NEXT_LINE_H
 # define FT_GET_NEXT_LINE_H
 
-# include "libft.h"
+# include <unistd.h>
+# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
 
-# define FD_OPEN_LIMIT 1024
 # define NULL_BYTE 1
 # define FAIL -1
 

@@ -6,16 +6,13 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/09 10:00:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:46:35 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
 # include "ft_ctype.h"
 # include "ft_linked_list.h"
 # include "ft_non_standard.h"
