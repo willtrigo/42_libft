@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 22:06:31 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/19 04:02:48 by dande-je         ###   ########.fr       */
+/*   Created: 2024/01/19 06:37:13 by dande-je          #+#    #+#             */
+/*   Updated: 2024/01/19 06:41:30 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * @brief Checks whether c is a 7-bit unsigned char value that fits into the
- * ASCII character set.
+ * @brief Checks for a lowercase character.
  *
  * @param c The character to be checked.
- * @return A nonzero value if the character falls into the tested class, zero
+ * @return A nonzero value if the character is a lowercase letter, zero
  * otherwise.
  */
-int	ft_isascii(int c)
+int	ft_islower(int c)
 {
-	return (c >= 0 && c <= 127);
+	return (c >= 'a' && c <= 'z');
 }

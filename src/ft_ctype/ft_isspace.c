@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/28 22:06:31 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/19 04:02:48 by dande-je         ###   ########.fr       */
+/*   Created: 2024/01/19 06:52:48 by dande-je          #+#    #+#             */
+/*   Updated: 2024/01/19 07:01:27 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * @brief Checks whether c is a 7-bit unsigned char value that fits into the
- * ASCII character set.
+ * @brief Checks for white-space characters.
+ *
+ * In the "C" and "POSIX" locales, these are: space, form-feed ('\f'), newline
+ * ('\n'), carriage return ('\r'), horizontal tab ('\t'), and vertical tab
+ * ('\v').
  *
  * @param c The character to be checked.
- * @return A nonzero value if the character falls into the tested class, zero
+ * @return A nonzero value if the character is a white-space character, zero
  * otherwise.
  */
-int	ft_isascii(int c)
+int	ft_isspace(int c)
 {
-	return (c >= 0 && c <= 127);
+	return ((c >= '\t' && c <= '\r') || c == ' ');
 }

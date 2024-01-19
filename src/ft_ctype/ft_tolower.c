@@ -6,15 +6,25 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 19:10:58 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/09 21:02:50 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/19 06:54:21 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "ft_ctype.h"
 
+/**
+ * @brief Converts an uppercase letter to lowercase.
+ *
+ * If `c` is an uppercase letter, returns its lowercase equivalent, if a
+ * lowercase representation exists in the current locale. Otherwise, returns
+ * `c`.
+ *
+ * @param c The character to be converted.
+ * @return The converted letter, or `c` if the conversion was not possible.
+ */
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (ft_isupper(c))
 		return (c + ('a' - 'A'));
 	return (c);
 }

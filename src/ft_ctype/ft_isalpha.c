@@ -6,13 +6,22 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 20:40:13 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/09 21:02:36 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/19 06:37:24 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "ft_ctype.h"
 
+/**
+ * @brief Checks for an alphabetic character.
+ *
+ * It is equivalent to (isupper(c) || islower(c)).
+ *
+ * @param c The character to be checked.
+ * @return A nonzero value if the character is an alphabetic character, zero
+ * otherwise.
+ */
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	return (ft_isupper(c) || ft_islower(c));
 }
