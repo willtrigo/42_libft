@@ -13,7 +13,8 @@
 #include "ft_linked_list.h"
 
 /**
- * @brief Receive a t_list parameter, this t_list will be use in the second param that is a function `void` and after the t_list will be free.
+ * @brief Receive a t_list parameter, this t_list will be use in the second
+ * param that is a function `void` and after the t_list will be free.
  *
  * @param lst The node will be free.
  * @param del The address of the function used to delete the content.
