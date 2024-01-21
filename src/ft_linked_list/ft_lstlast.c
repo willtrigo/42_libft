@@ -6,12 +6,18 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 20:36:41 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/09 21:03:08 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/18 08:20:34 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "ft_linked_list.h"
 
+/**
+ * @brief Returns the last node of the list.
+ *
+ * @param lst The beginning of the list.
+ * @return The last element of the list.
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
