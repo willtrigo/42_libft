@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:26:57 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:46:35 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/21 20:04:19 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@
 # include "ft_string.h"
 # include "ft_get_next_line.h"
 # include "ft_printf.h"
+
+# define BYTE 1
 
 #endif
