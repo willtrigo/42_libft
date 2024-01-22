@@ -45,21 +45,21 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_lstnew](https://img.shields.io/badge/LIBFT-ft__lstnew-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_linked_list/ft_lstnew.c)
 [![ft_lstsize](https://img.shields.io/badge/LIBFT-ft__lstsize-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_linked_list/ft_lstsize.c)
 
-### Non-standard functions
+### Non_standard functions
 
-[![ft_itoa](https://img.shields.io/badge/LIBFT-ft__itoa-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_itoa.c)
-[![ft_putchar_fd](https://img.shields.io/badge/LIBFT-ft__putchar__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_putchar_fd.c)
-[![ft_putendl_fd](https://img.shields.io/badge/LIBFT-ft__putendl__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_putendl_fd.c)
-[![ft_putnbr_fd](https://img.shields.io/badge/LIBFT-ft__putnbr__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_putnbr_fd.c)
-[![ft_putstr_fd](https://img.shields.io/badge/LIBFT-ft__putstr__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_putstr_fd.c)
-[![ft_split](https://img.shields.io/badge/LIBFT-ft__split-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_split.c)
-[![ft_striteri](https://img.shields.io/badge/LIBFT-ft__striteri-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_striteri.c)
-[![ft_strjoin](https://img.shields.io/badge/LIBFT-ft__strjoin-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_strjoin.c)
-[![ft_strmapi](https://img.shields.io/badge/LIBFT-ft__strmapi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_strmapi.c)
-[![ft_strtrim](https://img.shields.io/badge/LIBFT-ft__strtrim-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_strtrim.c)
-[![ft_substr](https://img.shields.io/badge/LIBFT-ft__substr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_substr.c)
+[![ft_itoa](https://img.shields.io/badge/LIBFT-ft__itoa-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_itoa.c)
+[![ft_putchar_fd](https://img.shields.io/badge/LIBFT-ft__putchar__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_putchar_fd.c)
+[![ft_putendl_fd](https://img.shields.io/badge/LIBFT-ft__putendl__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_putendl_fd.c)
+[![ft_putnbr_fd](https://img.shields.io/badge/LIBFT-ft__putnbr__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_putnbr_fd.c)
+[![ft_putstr_fd](https://img.shields.io/badge/LIBFT-ft__putstr__fd-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_putstr_fd.c)
+[![ft_split](https://img.shields.io/badge/LIBFT-ft__split-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_split.c)
+[![ft_striteri](https://img.shields.io/badge/LIBFT-ft__striteri-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_striteri.c)
+[![ft_strjoin](https://img.shields.io/badge/LIBFT-ft__strjoin-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_strjoin.c)
+[![ft_strmapi](https://img.shields.io/badge/LIBFT-ft__strmapi-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_strmapi.c)
+[![ft_strtrim](https://img.shields.io/badge/LIBFT-ft__strtrim-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_strtrim.c)
+[![ft_substr](https://img.shields.io/badge/LIBFT-ft__substr-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_substr.c)
 
-### Non-standard functions - Functions added after finishing the project
+### Non_standard functions - Functions added after finishing the project
 
 [![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_get_next_line/ft_get_next_line.c)
 [![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_printf/ft_printf.c)
