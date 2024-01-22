@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/01/18 14:56:15 by dande-je         ###   ########.fr        #
+#    Updated: 2024/01/22 05:01:28 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -116,6 +116,7 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_it
 	ft_strmapi.c \
 	ft_strtrim.c \
 	ft_substr.c \
+	ft_ilen.c \
 	ft_isdouble.c)
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_STDLIB_DIR), ft_atoi.c \

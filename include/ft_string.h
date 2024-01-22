@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:24:19 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:51:12 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:05:28 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FT_STRING_H
 
 # include <stdlib.h>
+# include "libft.h"
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);

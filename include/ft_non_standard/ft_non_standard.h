@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:14:09 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:04:44 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:03:07 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_isdouble(const char *str);
+int		ft_ilen(int n);
 
 #endif

@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_ilen.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 04:53:30 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 05:03:49 by dande-je         ###   ########.fr       */
+/*   Created: 2024/01/22 04:58:48 by dande-je          #+#    #+#             */
+/*   Updated: 2024/01/22 05:04:18 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard.h"
 
 /**
- * @brief Outputs the integer `n` to the given file descriptor.
+ * @brief This function return the count of how much digits the `int` have.
  *
- * @param n The integer to output.
- * @param fd The file descriptor on which to write.
+ * @param n The number of the integer.
+ * @return The count of the result of how much digits it is have.
  */
-void	ft_putnbr_fd(int n, int fd)
+int	ft_ilen(int n)
 {
-	char	*str_n;
+	int	i;
 
-	str_n = ft_itoa(n);
-	ft_putstr_fd(str_n, fd);
-	free(str_n);
+	i = 0;
+	if (n <= 0)
+	{
+		i++;
+		n = -n;
+	}
+	while (n > 0)
+	{
+		i++;
+		n /= 10;
+	}
+	return (i);
 }

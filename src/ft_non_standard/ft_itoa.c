@@ -6,13 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 01:53:54 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:12:51 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:02:08 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard.h"
-
-static int	ft_intlen(long int n);
 
 /**
  * @brief Allocates (with malloc(3)) and returns a string representing the
@@ -28,7 +26,7 @@ char	*ft_itoa(int n)
 	char		*str;
 
 	n_new = n;
-	n_len = ft_intlen(n_new);
+	n_len = ft_ilen(n_new);
 	str = ft_calloc(n_len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
@@ -44,26 +42,3 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-/**
- * @brief This function return the count of how much digits the `int` have.
- *
- * @param n The number of the integer.
- * @return The count of the result of how much digits it is have.
- */
-static int	ft_intlen(int n)
-{
-	int	i;
-
-	i = 0;
-	if (n <= 0)
-	{
-		i++;
-		n = -n;
-	}
-	while (n > 0)
-	{
-		i++;
-		n /= 10;
-	}
-	return (i);
-}
