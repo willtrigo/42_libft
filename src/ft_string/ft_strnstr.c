@@ -6,12 +6,23 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 23:12:41 by dande-je          #+#    #+#             */
-/*   Updated: 2023/12/09 21:04:33 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 04:51:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "ft_string.h"
 
+/**
+ * @brief Locates the first occurrence of the null-terminated string `little` in
+ * the string `big`, where not more than `len` characters are searched.
+ *
+ * @param big The string to be scanned.
+ * @param little The string to be searched for.
+ * @param len The maximum number of characters to be searched.
+ * @return If `little` is an empty string, `big` is returned; if `little` occurs
+ * nowhere in `big`, NULL is returned; otherwise a pointer to the first
+ * character of the first occurrence of `little` is returned.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -27,5 +38,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			return ((char *)big);
 		big++;
 	}
-	return (0);
+	return (NULL);
 }
