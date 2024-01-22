@@ -27,6 +27,12 @@ The first project of the 42 curriculum. It consists of recreating various standa
 [![ft_tolower](https://img.shields.io/badge/LIBFT-ft__tolower-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_ctype/ft_tolower.c)
 [![ft_toupper](https://img.shields.io/badge/LIBFT-ft__toupper-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_ctype/ft_toupper.c)
 
+### Functions from <ctype.h> - Functions added after finishing the project
+
+[![ft_islower](https://img.shields.io/badge/LIBFT-ft__islower-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_ctype/ft_islower.c)
+[![ft_isspace](https://img.shields.io/badge/LIBFT-ft__isspace-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_ctype/ft_isspace.c)
+[![ft_isupper](https://img.shields.io/badge/LIBFT-ft__isupper-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_ctype/ft_isupper.c)
+
 ### Linked list functions
 
 [![ft_lstadd_back](https://img.shields.io/badge/LIBFT-ft__lstadd__back-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_linked_list/ft_lstadd_back.c)
@@ -57,6 +63,7 @@ The first project of the 42 curriculum. It consists of recreating various standa
 
 [![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_get_next_line/ft_get_next_line.c)
 [![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_printf/ft_printf.c)
+[![ft_ilen](https://img.shields.io/badge/LIBFT-ft__ilen-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_ilen.c)
 [![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_isdouble.c)
 
 ### Functions from <stdlib.h>
