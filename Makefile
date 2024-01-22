@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/01/22 05:01:28 by dande-je         ###   ########.fr        #
+#    Updated: 2024/01/22 07:42:46 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS_FT_PRINTF_PARSE_DIR       := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/
 SRCS_FT_PRINTF_COMBINATION_DIR := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/combination_utils/
 SRCS_FT_STDLIB_DIR             := src/ft_stdlib/
 SRCS_FT_STRING_DIR             := src/ft_string/
-INCS                           := include/ include/ft_non_standard/
+INCS                           := include/
 BUILD_DIR                      := build/
 
 #******************************************************************************#

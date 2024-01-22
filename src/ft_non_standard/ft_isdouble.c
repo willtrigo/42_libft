@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 02:51:31 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:10:18 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:45:26 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Check if the string is a double.

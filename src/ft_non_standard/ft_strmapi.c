@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 20:08:33 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:39:54 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:46:32 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Applies the function `f` on each character of the string `s`, and

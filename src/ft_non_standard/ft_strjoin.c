@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 19:28:16 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:06:25 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:46:25 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Allocates (with malloc(3)) and returns a new string, which is the

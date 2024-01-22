@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 04:52:17 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:44:25 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:46:04 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Outputs the string `s` to the given file descriptor.

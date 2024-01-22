@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/20 23:35:23 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:40:07 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:46:12 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 static void		ft_make_split(char const *s, char c, size_t i, char **split);
 static size_t	ft_count_words(char const *s, char c);

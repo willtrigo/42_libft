@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:01:56 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:31:39 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 08:00:28 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_non_standard/ft_printf.h"
 
 static void	ft_combination_int_math_aux(t_line *line, t_lli nbr,
 				t_combination_history *hist);

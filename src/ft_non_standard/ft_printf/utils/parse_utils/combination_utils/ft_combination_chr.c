@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 03:10:48 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:32:03 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 08:00:55 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_non_standard/ft_printf.h"
 
 void	ft_combination_head_chr(t_line *line)
 {

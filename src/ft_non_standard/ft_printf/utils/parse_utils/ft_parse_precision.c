@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 18:15:19 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:30:52 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:59:02 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "ft_non_standard/ft_printf.h"
 
 static int	ft_precision_without_nbr(t_line *format, \
 				t_line *line);

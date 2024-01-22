@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 06:22:34 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:29:32 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 08:01:31 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_get_next_line.h"
+#include "ft_non_standard/ft_get_next_line.h"
 
 /**
  * @brief Add a new node in the linked list.

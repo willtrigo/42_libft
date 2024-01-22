@@ -6,11 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 04:23:05 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 20:40:36 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/01/22 07:45:42 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Outputs the character `c` to the given file descriptor.
