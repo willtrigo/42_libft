@@ -61,10 +61,10 @@ The first project of the 42 curriculum. It consists of recreating various standa
 
 ### Non-standard functions - Functions added after finishing the project
 
-[![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_get_next_line/ft_get_next_line.c)
-[![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_printf/ft_printf.c)
-[![ft_ilen](https://img.shields.io/badge/LIBFT-ft__ilen-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_ilen.c)
-[![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non-standard/ft_isdouble.c)
+[![ft_get_next_line](https://img.shields.io/badge/LIBFT-ft__get__next__line-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_get_next_line/ft_get_next_line.c)
+[![ft_printf](https://img.shields.io/badge/LIBFT-ft__printf-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_printf/ft_printf.c)
+[![ft_ilen](https://img.shields.io/badge/LIBFT-ft__ilen-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_ilen.c)
+[![ft_isdouble](https://img.shields.io/badge/LIBFT-ft__isdouble-skyblue?style=for-the-badge&logo=42)](https://github.com/willtrigo/42_libft/tree/main/src/ft_non_standard/ft_isdouble.c)
 
 ### Functions from <stdlib.h>
 
