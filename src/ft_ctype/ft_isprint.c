@@ -6,15 +6,18 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 05:08:14 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/19 03:42:19 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/07 03:41:16 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * @brief Checks for any printable character including space.
+ * @brief Checks for a printable character including space.
+ *
+ * This function checks the character `c` is a printable character.
  *
  * @param c The character to be checked.
- * @return A nonzero value if the character is printable, zero otherwise.
+ *
+ * @return A non-zero value if the character is printable, zero otherwise.
  */
 int	ft_isprint(int c)
 {

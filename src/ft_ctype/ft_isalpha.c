@@ -6,20 +6,21 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 20:40:13 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/19 06:37:24 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/07 03:26:54 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ctype.h"
 
 /**
- * @brief Checks for an alphabetic character.
+ * @brief Checks for an alphabetic character (letter).
  *
- * It is equivalent to (isupper(c) || islower(c)).
+ * This function checks the character 'c' is alphabet (Uppercase letter or 
+ * lowcase letter).
  *
  * @param c The character to be checked.
- * @return A nonzero value if the character is an alphabetic character, zero
- * otherwise.
+ *
+ * @return A non-zero value if the character is alphabetic, zero otherwise.
  */
 int	ft_isalpha(int c)
 {

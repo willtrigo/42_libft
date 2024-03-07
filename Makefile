@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/01/22 07:42:46 by dande-je         ###   ########.fr        #
+#    Updated: 2024/03/07 03:49:32 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,10 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_CTYPE_DIR), ft_isalnum.c
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
+	ft_islower.c \
 	ft_isprint.c \
+	ft_isspace.c \
+	ft_isupper.c \
 	ft_tolower.c \
 	ft_toupper.c)
 
