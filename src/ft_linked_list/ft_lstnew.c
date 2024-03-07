@@ -6,20 +6,24 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 02:43:44 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:20:41 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/07 04:51:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "ft_linked_list.h"
 
 /**
- * @brief Allocates (with malloc(3)) and returns a new node.
+ * @brief Allocates and initializes a new list node.
  *
- * The variable `content` is initialized with the value of the parameter
- * `content`. The variable `next` is initialized to NULL.
+ * This function allocates memory for a new linked list node using `malloc`. If
+ * successful, it sets the content of the node to the provided `content` and the
+ * next pointer to NULL. Otherwise, it returns NULL.
  *
- * @param content The content to create the new node with.
- * @return The new node.
+ * @param content The content to be stored in the new node.
+ *
+ * @return A pointer to the newly created list node, or NULL if allocation
+ * fails.
  */
 t_list	*ft_lstnew(void *content)
 {
