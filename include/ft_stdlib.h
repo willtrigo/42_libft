@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:22:54 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:50:46 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/07 05:26:53 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 # define FT_STDLIB_H
 
 # include <stdlib.h>
-# include "ft_string.h"
-# include "ft_ctype.h"
+
+enum e_ato
+{
+	MINUS = -1,
+	ATO_DEFAULT = 0,
+	ATO_INIT = 1,
+	ATO_NULL = 0,
+	ATO_DECIMAL = 10,
+};
 
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);

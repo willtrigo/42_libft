@@ -6,32 +6,39 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 23:32:49 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 23:04:14 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/07 05:34:53 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_stdlib.h"
 
 /**
- * @brief Converts the initial portion of the string pointed to by `str` to int
- * representation.
+ * @brief Converts a string representation of a integer-point number to an
+ * integer value.
  *
- * @param str The string to be converted.
- * @return The converted value or 0 on error.
+ * This function parses the given string (`str`) and converts it to a
+ * integer number. It handles:
+ * - Optional leading whitespace (spaces, tabs, newlines, and carriage returns).
+ * - Optional sign (`+` or `-`).
+ * - Integer parts consisting of digits (`0` to `9`).
+ *
+ * @param str A null-terminated string containing the number representation.
+ *
+ * @return The converted integer value, or 0 if an error occurs.
  */
 int	ft_atoi(const char *nptr)
 {
 	int	nb;
 	int	sign;
 
-	nb = 0;
-	sign = 1;
+	nb = ATO_DEFAULT;
+	sign = ATO_INIT;
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
 		nptr++;
 	if (*nptr == '-' || *nptr == '+')
 		if (*nptr++ == '-')
-			sign *= -1;
-	while (ft_isdigit(*nptr))
-		nb = (nb * 10) + (*nptr++ - '0');
+			sign *= MINUS;
+	while (*nptr >= '0' && *nptr <= '9')
+		nb = (nb * ATO_DECIMAL) + (*nptr++ - '0');
 	return (nb * sign);
 }
