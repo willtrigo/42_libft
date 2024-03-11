@@ -6,12 +6,13 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/22 14:29:38 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/07 05:27:15 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:45:05 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_stdlib.h"
+#include "ft_default.h"
 
 /**
  * @brief Converts a string representation of a floating-point number to a
@@ -37,24 +38,24 @@ double	ft_atof(const char *str)
 	int		decimal;
 	int		sign;
 
-	nb = ATO_DEFAULT;
-	sign = ATO_INIT;
-	decimal = ATO_INIT;
+	nb = DEFAULT;
+	sign = DEFAULT_BEGIN;
+	decimal = DEFAULT_BEGIN;
 	if (str == NULL)
-		return (ATO_NULL);
+		return (ZERO);
 	while ((*str >= '\t' && *str <= '\r') || *str == ' ')
 		str++;
 	if (*str == '-' || *str == '+')
 		if (*str++ == '-')
 			sign *= MINUS;
 	while (*str >= '0' && *str <= '9')
-		nb = (nb * ATO_DECIMAL) + (*str++ - '0');
+		nb = (nb * DECIMAL) + (*str++ - '0');
 	if (*str == '.')
 		str++;
 	while (*str >= '0' && *str <= '9')
 	{
-		nb = (nb * ATO_DECIMAL) + (*str++ - '0');
-		decimal = decimal * ATO_DECIMAL;
+		nb = (nb * DECIMAL) + (*str++ - '0');
+		decimal = decimal * DECIMAL;
 	}
 	return (nb / decimal * sign);
 }
