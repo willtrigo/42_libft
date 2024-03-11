@@ -6,27 +6,27 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:37:15 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/26 19:13:13 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 23:32:10 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
 /**
- * @brief Calculates the length of the string pointed to by `s`, excluding the
- * terminating null byte ('\0').
+ * @brief Calculates the length of a null-terminated string.
  *
- * @param s The string to be scanned.
- * @return Number of bytes in the string pointed to by `s`.
+ * This function measures the length of the null-terminated string `s` by
+ * counting the number of characters before the null terminator.
+ *
+ * @param s A pointer to the null-terminated string to measure.
+ * @return The length of the string, excluding the null terminator.
  */
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	const char	*str;
 
-	i = 0;
-	if (!str)
-		return (i);
-	while (str[i])
-		i++;
-	return (i);
+	str = s;
+	while (*str)
+		str++;
+	return (str - s);
 }

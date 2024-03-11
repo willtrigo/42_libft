@@ -6,21 +6,26 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 20:06:12 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/21 23:26:55 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 07:08:50 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
 /**
- * @brief Scans the initial `n` bytes of the memory area pointed to by `s` for
- * the first instance of `c`.
+ * @brief Locates the first occurrence of a byte in memory.
  *
- * @param s A pointer to the memory area to be scanned.
- * @param c The character to be located.
- * @param n The number of bytes to be scanned.
- * @return A pointer to the matching byte or NULL if the character does not
- * occur in the given memory area.
+ * This function searches the first `n` bytes of the memory pointed to by `s`
+ * for the character `c` (converted to an unsigned char). It returns a pointer
+ * to the first occurrence of `c` in the memory block, or NULL if the character
+ * is not found within the first `n` bytes.
+ *
+ * @param s A pointer to the memory block to be searched.
+ * @param c The character value to be searched.
+ * @param n The number of bytes to search.
+ *
+ * @return A pointer to the first occurrence of `c` in the memory block, or
+ * NULL if not found.
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,25 +6,31 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 00:13:40 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 03:57:42 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 07:22:21 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
 /**
- * @brief Copies `n` bytes from memory area `src` to memory area `dest`.
+ * @brief Copies a block of memory from one location to another.
  *
- * @param dest A pointer to the destination memory area.
- * @param src A pointer to the source memory area.
- * @param n The number of bytes to be copied.
- * @return A pointer to `dest`.
+ * This function copies `n` bytes of memory from the source address `src` to the
+ * destination address `dest`. It handles overlapping memory regions to ensure
+ * correct copying even when `dest` and `src` overlap.
+ * 
+ * @param dest A pointer to the destination memory block where the content is to
+ * be copied.
+ * @param src A pointer to the source memory block to be copied.
+ * @param n The number of bytes to copy.
+ *
+ * @return A pointer to the destination memory block (`dest`).
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	i = -1;
+	i = STRING_INIT;
 	if (!dest && !src)
 		return (NULL);
 	while (++i < n)

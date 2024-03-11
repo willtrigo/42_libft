@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 23:24:19 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 05:05:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 22:56:24 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 # define FT_STRING_H
 
 # include <stdlib.h>
-# include "libft.h"
+
+enum e_string
+{
+	STRING_DEFAULT = 0,
+	STRING_INIT = -1,
+	NULL_BYTE = 1,
+};
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);

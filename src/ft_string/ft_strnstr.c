@@ -6,31 +6,38 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 23:12:41 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 04:51:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 23:44:25 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
 /**
- * @brief Locates the first occurrence of the null-terminated string `little` in
- * the string `big`, where not more than `len` characters are searched.
+ * @brief Locates the first occurrence of a substring within a limited search
+ * length, similar to C's strnstr.
  *
- * @param big The string to be scanned.
- * @param little The string to be searched for.
- * @param len The maximum number of characters to be searched.
- * @return If `little` is an empty string, `big` is returned; if `little` occurs
- * nowhere in `big`, NULL is returned; otherwise a pointer to the first
- * character of the first occurrence of `little` is returned.
+ * This function searches the null-terminated string `big` for the first
+ * occurrence of the entire null-terminated substring `little` within the first
+ * `len` characters of `big`. It returns a pointer to the beginning of the first
+ * occurrence of `little` in `big`, or NULL if `little` is not found within the
+ * first `len` characters.
+ * If `little` is an empty string, the function returns `big`.
+ *
+ * @param big big The null-terminated string to be searched.
+ * @param little little The null-terminated substring to be searched for.
+ * @param len The maximum number of characters to search in `big`.
+ *
+ * @return A pointer to the beginning of the first occurrence of `little` in
+ * `big`, or NULL if not found within `len` characters.
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	little_len;
 
-	i = 0;
+	i = STRING_DEFAULT;
 	little_len = ft_strlen(little);
-	if (little_len == 0)
+	if (little_len == STRING_DEFAULT)
 		return ((char *)big);
 	while (*big && i <= len)
 	{

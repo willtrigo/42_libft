@@ -6,27 +6,30 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 01:09:16 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 04:54:07 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/10 23:48:24 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
 
 /**
- * @brief Returns a pointer to the last occurrence of the character `c` in the
- * string `s`.
+ * @brief Locates the last occurrence of a character in a string.
  *
- * @param s The string to be scanned.
- * @param c The character to be located.
- * @return The pointer to the matched character or NULL if the character is not
- * found.
+ * This function searches the null-terminated string `s` for the last occurrence
+ * of the character `c` (converted to an unsigned char). It returns a pointer to
+ * the last occurrence of `c` within `s`, or NULL if `c` is not found.
+ *
+ * @param s A pointer to the null-terminated string to be searched.
+ * @param c The character to search for, converted to unsigned char.
+ *
+ * @return A pointer to the last occurrence of `c` in `s`, or NULL if not found.
  */
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = ft_strlen(s);
-	while (i != 0 && s[i] != (char)c)
+	while (i != STRING_DEFAULT && s[i] != (char)c)
 		i--;
 	if (s[i] == (char)c)
 		return ((char *)s + i);
