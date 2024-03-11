@@ -6,18 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/09 21:48:51 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/07 03:23:59 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:24:22 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_CTYPE_H
 # define FT_CTYPE_H
-
-enum e_ascii
-{
-	NUL = 0,
-	DEL = 127,
-};
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
