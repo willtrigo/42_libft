@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 23:01:53 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 07:15:14 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:25:42 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Compares two blocks of memory.
@@ -27,11 +28,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
-	i = STRING_INIT;
-	if (n == STRING_DEFAULT)
-		return (STRING_DEFAULT);
+	i = INIT;
+	if (n == DEFAULT)
+		return (DEFAULT);
 	while (++i < n)
 		if (*(unsigned char *)(s1 + i) != *(unsigned char *)(s2 + i))
 			return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
-	return (STRING_DEFAULT);
+	return (DEFAULT);
 }

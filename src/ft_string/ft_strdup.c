@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 04:13:07 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:01:14 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:26:21 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Allocates and returns a new string representing a duplicate of the

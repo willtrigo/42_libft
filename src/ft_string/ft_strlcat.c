@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 11:44:16 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:09:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:26:33 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Appends a string to an existing string, with safeguards against buffer

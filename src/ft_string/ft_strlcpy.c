@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 16:26:07 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:48:46 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:26:45 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Copies a string with a specified maximum length to prevent buffer
@@ -35,7 +36,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 
-	i = STRING_INIT;
+	i = INIT;
 	if (!size)
 		return (ft_strlen(src));
 	while (*(src + ++i) && --size)

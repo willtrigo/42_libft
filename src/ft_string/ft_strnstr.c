@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/13 23:12:41 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:44:25 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:37:54 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Locates the first occurrence of a substring within a limited search
@@ -35,9 +36,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	i;
 	size_t	little_len;
 
-	i = STRING_DEFAULT;
+	i = DEFAULT;
 	little_len = ft_strlen(little);
-	if (little_len == STRING_DEFAULT)
+	if (little_len == DEFAULT)
 		return ((char *)big);
 	while (*big && i <= len)
 	{

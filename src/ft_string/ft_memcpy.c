@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 00:13:40 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 07:22:21 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:25:59 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Copies a block of memory from one location to another.
@@ -30,7 +31,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
-	i = STRING_INIT;
+	i = INIT;
 	if (!dest && !src)
 		return (NULL);
 	while (++i < n)

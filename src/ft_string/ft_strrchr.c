@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 01:09:16 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:48:24 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:38:07 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Locates the last occurrence of a character in a string.
@@ -29,7 +30,7 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = ft_strlen(s);
-	while (i != STRING_DEFAULT && s[i] != (char)c)
+	while (i != DEFAULT && s[i] != (char)c)
 		i--;
 	if (s[i] == (char)c)
 		return ((char *)s + i);

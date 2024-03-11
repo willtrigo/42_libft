@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 07:56:24 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 23:39:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 01:37:33 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_string.h"
+#include "ft_default.h"
 
 /**
  * @brief Compares a limited length of two strings.
@@ -38,9 +39,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	i = STRING_DEFAULT;
-	if (n == STRING_DEFAULT)
-		return (STRING_DEFAULT);
+	i = DEFAULT;
+	if (n == DEFAULT)
+		return (DEFAULT);
 	while (s1[i] && (s1[i] == s2[i]) && i < (n - NULL_BYTE))
 		i++;
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
