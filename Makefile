@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/03/07 03:49:32 by dande-je         ###   ########.fr        #
+#    Updated: 2024/03/12 04:22:11 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -108,7 +108,9 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_LINKED_LIST_DIR), ft_lst
 	ft_lstnew.c \
 	ft_lstsize.c)
 
-SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_itoa.c \
+SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_ilen.c \
+	ft_isdouble.c \
+	ft_itoa.c \
 	ft_putchar_fd.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
@@ -117,10 +119,9 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_it
 	ft_striteri.c \
 	ft_strjoin.c \
 	ft_strmapi.c \
+	ft_strtod.c \
 	ft_strtrim.c \
-	ft_substr.c \
-	ft_ilen.c \
-	ft_isdouble.c)
+	ft_substr.c )
 
 SRCS_FILES                     += $(addprefix $(SRCS_FT_STDLIB_DIR), ft_atoi.c \
 	ft_calloc.c \
