@@ -6,83 +6,37 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 07:00:58 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:47:54 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:51:36 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
-t_line	ft_line_init(void)
+int	ft_parse_nbr(t_line *format, int nbr)
 {
-	return ((t_line){NULL, OFF, OFF, OFF, OFF, OFF, OFF, OFF, OFF});
+	while (format->str->chr >= '0' && format->str->chr <= '9')
+	{
+		nbr = (nbr * DECIMAL) + (format->str->chr - '0');
+		ft_format_jump(format);
+	}
+	return (nbr);
 }
 
-void	ft_chr_add(t_line_chr **line_chr,
-			t_line_chr *chr_new, t_line *line)
+t_lli	ft_get_nbr_len(t_lli nbr)
 {
-	t_line_chr	*line_temp;
+	t_lli	nbr_i;
 
-	if (chr_new)
+	nbr_i = INIT;
+	if (nbr <= DEFAULT)
 	{
-		if (!*line_chr)
-			*line_chr = chr_new;
-		else
-		{
-			line_temp = *line_chr;
-			while (line_temp->next)
-				line_temp = line_temp->next;
-			line_temp->next = chr_new;
-		}
+		nbr_i++;
+		nbr = -nbr;
 	}
-	line->len++;
-}
-
-t_line_chr	*ft_chr_new(char chr)
-{
-	t_line_chr	*chr_new;
-
-	chr_new = malloc(sizeof(t_line_chr));
-	if (!chr_new)
+	while (nbr > INIT)
 	{
-		free(chr_new);
-		return (NULL);
+		nbr_i++;
+		nbr /= 10;
 	}
-	chr_new->chr = chr;
-	chr_new->next = NULL;
-	return (chr_new);
-}
-
-void	ft_print_line(t_line *line)
-{
-	t_line_chr		*line_temp;
-	char			*line_new;
-	size_t			i;
-
-	line_new = malloc(sizeof(char) * (line->len + BYTE));
-	if (!line_new)
-	{
-		free(line_new);
-		return ;
-	}
-	i = 0;
-	line_temp = NULL;
-	while (line->str)
-	{
-		line_temp = line->str->next;
-		line_new[i++] = line->str->chr;
-		free(line->str);
-		line->str = line_temp;
-	}
-	line_new[i] = '\0';
-	write(STDOUT_FILENO, line_new, line->len);
-	free(line_new);
-}
-
-void	ft_format_jump(t_line *format)
-{
-	t_line_chr	*format_temp;
-
-	format_temp = format->str->next;
-	free(format->str);
-	format->str = format_temp;
+	return (nbr_i);
 }

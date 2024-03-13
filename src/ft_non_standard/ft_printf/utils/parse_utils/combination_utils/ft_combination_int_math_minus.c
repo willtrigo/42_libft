@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 06:39:04 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 08:00:22 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 02:03:13 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void	ft_int_math_minus_aux(t_line *line, t_lli nbr,
 				t_combination_history *hist);
@@ -20,8 +21,8 @@ static void	ft_int_math_minus_aux_1(t_line *line, t_lli nbr,
 void	ft_int_math_minus(t_line *line, t_lli nbr, \
 			t_combination_history *hist)
 {
-	if (((nbr < 0) || (hist->len == BYTE)) && ((hist->width == BYTE) \
-		|| (hist->prec == BYTE)))
+	if (((nbr < 0) || (hist->len == CHAR_BYTE)) && ((hist->width == CHAR_BYTE) \
+		|| (hist->prec == CHAR_BYTE)))
 	{
 		ft_math_apply(line, OFF, OFF, --line->minus);
 		if (nbr < 0)
@@ -50,7 +51,7 @@ static void	ft_int_math_minus_aux(t_line *line, t_lli nbr,
 		if (nbr < 0)
 		{
 			ft_math_apply(line, line->prec - hist->len \
-				- BYTE, line->width, OFF);
+				- CHAR_BYTE, line->width, OFF);
 			line->zero = ON;
 		}
 		return ;

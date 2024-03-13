@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 19:25:55 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:59:30 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:58:37 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void					ft_parse_combination_aux(t_line *format, \
 								t_line *line, const t_parse_comb_struct \
@@ -22,8 +23,8 @@ void	ft_parse_combination(t_line *format, t_line *line)
 	const t_parse_comb_struct	parse_comb = ft_parse_comb_init();
 	int							comb_len;
 
-	comb_len = I_INIT;
-	if (ft_check_spec(format, DEFAULT_INIT) == ON)
+	comb_len = INIT;
+	if (ft_check_spec(format, DEFAULT) == ON)
 		return ;
 	ft_parse_combination_aux(format, line, &parse_comb, comb_len);
 }

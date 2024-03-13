@@ -6,11 +6,13 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 23:13:52 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:47:43 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:45:46 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
+#include <stdlib.h>
 
 t_line	ft_line_init(void)
 {
@@ -58,7 +60,7 @@ void	ft_print_line(t_line *line)
 	char		*line_new;
 	size_t		i;
 
-	line_new = malloc(sizeof(char) * (line->len + BYTE));
+	line_new = malloc(sizeof(char) * (line->len + NULL_BYTE));
 	if (!line_new)
 	{
 		free(line_new);

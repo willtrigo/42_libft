@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 09:19:09 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:58:46 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:55:25 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 void	ft_parse_width(t_line *format, t_line *line)
 {
@@ -23,13 +24,13 @@ void	ft_parse_width(t_line *format, t_line *line)
 	}
 	while (format->str)
 	{
-		if (ft_check_spec(format, DEFAULT_INIT) == ON)
+		if (ft_check_spec(format, INIT) == ON)
 			break ;
 		else if (format->str->chr == '.')
 			ft_parse_precision(format, line);
 		else if (format->str->chr == '-')
 			ft_parse_minus(format, line);
 		else if (format->str->chr >= '1' && format->str->chr <= '9')
-			line->width = ft_parse_nbr(format, DEFAULT_INIT);
+			line->width = ft_parse_nbr(format, INIT);
 	}
 }

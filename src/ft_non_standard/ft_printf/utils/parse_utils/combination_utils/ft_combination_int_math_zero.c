@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 04:15:37 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 08:00:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 02:04:22 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void	ft_int_math_zero_aux(t_line *line, t_lli nbr,
 				t_combination_history *hist);
@@ -18,8 +19,8 @@ static void	ft_int_math_zero_aux(t_line *line, t_lli nbr,
 void	ft_int_math_zero(t_line *line, t_lli nbr, \
 			t_combination_history *hist)
 {
-	if (((nbr < 0) || (hist->len == BYTE)) && ((hist->width == BYTE) \
-		&& (hist->prec == BYTE)))
+	if (((nbr < 0) || (hist->len == CHAR_BYTE)) && ((hist->width == CHAR_BYTE) \
+		&& (hist->prec == CHAR_BYTE)))
 	{
 		ft_math_apply(line, OFF, OFF, line->minus);
 		return ;
@@ -41,7 +42,7 @@ static void	ft_int_math_zero_aux(t_line *line, t_lli nbr,
 		ft_math_apply(line, line->prec - hist->len, OFF, line->minus);
 		if (nbr < 0)
 			ft_math_apply(line, line->prec - hist->len \
-				- BYTE, OFF, line->minus);
+				- CHAR_BYTE, OFF, line->minus);
 	}
 	else if (hist->width == hist->len)
 		ft_math_apply(line, line->prec, OFF, line->minus);

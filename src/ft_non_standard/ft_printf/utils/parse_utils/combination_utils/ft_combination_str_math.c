@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 10:14:40 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:59:50 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 02:05:20 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void	ft_combination_str_math_aux(t_line *line, char *str,
 				t_combination_history *hist);
@@ -111,9 +112,9 @@ static void	ft_combination_str_mix(t_line *line, char *str,
 static void	ft_combination_str_zero(t_line *line,
 				t_combination_history *hist)
 {
-	if (line->zero == ZERO)
+	if (line->zero == FLAG_ZERO)
 	{
-		if (hist->prec == ZERO)
+		if (hist->prec == FLAG_ZERO)
 			ft_math_apply(line, FAIL, OFF, OFF);
 		if (hist->width >= ON)
 			ft_math_apply(line, FAIL, hist->width, OFF);

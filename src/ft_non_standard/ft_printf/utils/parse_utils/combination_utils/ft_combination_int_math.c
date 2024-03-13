@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:01:56 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 08:00:28 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 02:01:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void	ft_combination_int_math_aux(t_line *line, t_lli nbr,
 				t_combination_history *hist);
@@ -63,7 +64,7 @@ static void	ft_combination_int_math_aux_1(t_line *line, t_lli nbr,
 {
 	if (line->minus == FAIL)
 		ft_math_apply(line, line->prec - hist->len \
-		+ BYTE + BYTE, line->width, line->minus);
+		+ CHAR_BYTE + CHAR_BYTE, line->width, line->minus);
 	if (line->minus >= ON)
 		ft_int_math_minus(line, nbr, hist);
 	if (line->width >= ON)
@@ -103,7 +104,7 @@ static void	ft_combination_int_math_0(t_line *line)
 
 static void	ft_combination_int_math_0_aux(t_line *line)
 {
-	if (line->zero == ZERO)
+	if (line->zero == FLAG_ZERO)
 	{
 		if (line->minus >= ON)
 			ft_math_apply(line, FAIL, OFF, line->minus);

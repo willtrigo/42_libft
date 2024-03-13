@@ -6,10 +6,11 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 06:22:34 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 08:01:31 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:18:43 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "ft_non_standard/ft_get_next_line.h"
 
 /**

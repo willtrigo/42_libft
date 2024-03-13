@@ -6,38 +6,43 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 03:42:43 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/18 08:46:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:43:25 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
 
-# define FAIL -1
-# define I_INIT -1
-# define ZERO -2
-# define BYTE 1
-# define JUMP 1
 # define NULL_PTR "(nil)"
 # define NULL_STR "(null)"
-# define CHK_HEX_PTR 1
-# define CHK_HEX_LW 2
-# define CHK_HEX_UP 3
-# define CHK_INT_D_I 1
-# define CHK_INT_U 2
 # define HEX_LW "0123456789abcdef"
 # define HEX_UP "0123456789ABCDEF"
-# define ON 1
-# define OFF 0
 # define SPEC "cspdiuxX%"
 # define SPEC_PARSE "cspdiuxX"
-# define DEFAULT_INIT 0
-# define SPEC_SIZE 10
-# define COMB_SIZE 8
+
+enum e_element_size
+{
+	SPEC_SIZE = 10,
+	COMB_SIZE = 8,
+};
+
+enum e_default_chk
+{
+	CHK_HEX_PTR = 1,
+	CHK_HEX_LW = 2,
+	CHK_HEX_UP = 3,
+	CHK_INT_D_I = 1,
+	CHK_INT_U = 2,
+};
+
+enum e_default_printf
+{
+	FLAG_ZERO = -2,
+	JUMP = 1,
+};
 
 typedef unsigned int					t_ui;
 typedef unsigned long int				t_uli;

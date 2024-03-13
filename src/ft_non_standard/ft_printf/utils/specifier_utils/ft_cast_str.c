@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 04:50:00 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:50:27 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:52:56 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 void	ft_cast_str(va_list ap, t_line *line, \
 			t_line *format, int spec)

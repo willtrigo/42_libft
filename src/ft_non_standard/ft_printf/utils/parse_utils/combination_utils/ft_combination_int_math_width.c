@@ -6,11 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 05:39:31 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 08:00:14 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 02:03:44 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 static void	ft_int_math_width_aux(t_line *line, t_lli nbr,
 				t_combination_history *hist);
@@ -22,7 +23,7 @@ static void	ft_int_math_width_aux_2(t_line *line, t_lli nbr,
 void	ft_int_math_width(t_line *line, t_lli nbr, \
 			t_combination_history *hist)
 {
-	if (((nbr < 0) || (hist->len == BYTE)) && (hist->prec == BYTE))
+	if (((nbr < 0) || (hist->len == CHAR_BYTE)) && (hist->prec == CHAR_BYTE))
 	{
 		ft_math_apply(line, OFF, OFF, line->minus);
 		line->zero = ON;

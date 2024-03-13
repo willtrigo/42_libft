@@ -6,22 +6,23 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:25:23 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:58:39 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/13 01:55:08 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_printf.h"
+#include "ft_default.h"
 
 void	ft_parse_zero(t_line *format, t_line *line)
 {
 	line->zero = ON;
 	while (format->str->chr == '0')
 		ft_format_jump(format);
-	if (ft_check_spec(format, DEFAULT_INIT) == ON)
+	if (ft_check_spec(format, INIT) == ON)
 		return ;
 	while (format->str)
 	{
-		if (ft_check_spec(format, DEFAULT_INIT) == ON)
+		if (ft_check_spec(format, INIT) == ON)
 			break ;
 		if (format->str->chr == '.')
 			ft_parse_precision(format, line);

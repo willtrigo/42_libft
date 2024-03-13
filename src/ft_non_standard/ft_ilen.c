@@ -6,32 +6,34 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 04:58:48 by dande-je          #+#    #+#             */
-/*   Updated: 2024/01/22 07:45:17 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/11 02:13:15 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_non_standard/ft_non_standard.h"
+#include "ft_default.h"
 
 /**
- * @brief This function return the count of how much digits the `int` have.
+ * @brief Calculates the number of places required to represent the absolute
+ * value of an integer.
  *
- * @param n The number of the integer.
- * @return The count of the result of how much digits it is have.
+ * This function takes an integer `n` as input and returns the number of places
+ * needed to represent the absolute value of `n`.
+ *
+ * @param n The integer that will be used to determine how much places is
+ * required.
+ *
+ * @return The number of decimal places required to represent the absolute value
+ * of `n`.
  */
 int	ft_ilen(int n)
 {
 	int	i;
 
-	i = 0;
-	if (n <= 0)
-	{
-		i++;
+	i = DEFAULT;
+	if (n <= DEFAULT && i++)
 		n = -n;
-	}
-	while (n > 0)
-	{
-		i++;
-		n /= 10;
-	}
+	while (n > DEFAULT && i++)
+		n /= DECIMAL;
 	return (i);
 }
