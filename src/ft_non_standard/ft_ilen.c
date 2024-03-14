@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 04:58:48 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/11 02:13:15 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/14 05:54:38 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,15 @@ int	ft_ilen(int n)
 	int	i;
 
 	i = DEFAULT;
-	if (n <= DEFAULT && i++)
+	if (n <= DEFAULT)
+	{
+		i++;
 		n = -n;
-	while (n > DEFAULT && i++)
+	}
+	while (n > DEFAULT)
+	{
+		i++;
 		n /= DECIMAL;
+	}
 	return (i);
 }
