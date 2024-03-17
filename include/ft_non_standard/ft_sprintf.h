@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 03:42:43 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/17 04:06:52 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/17 05:55:19 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ struct s_combination_history
 	t_lli			len;
 };
 
-int			ft_printf(char *str, const char *format, ...);
+int			ft_sprintf(char *str, const char *format, ...);
 void		ft_get_spec(t_line *format, va_list ap, t_line *line);
 int			ft_check_spec(t_line *format, int i);
 void		ft_parse_combination(t_line *format, t_line *line);
