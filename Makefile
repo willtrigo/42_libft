@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/03/12 04:22:11 by dande-je         ###   ########.fr        #
+#    Updated: 2024/03/17 04:17:02 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,11 @@ SRCS_FT_PRINTF_UTILS_DIR       := $(SRCS_FT_PRINTF_DIR)utils/
 SRCS_FT_PRINTF_SPECIFIER_DIR   := $(SRCS_FT_PRINTF_DIR)utils/specifier_utils/
 SRCS_FT_PRINTF_PARSE_DIR       := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/
 SRCS_FT_PRINTF_COMBINATION_DIR := $(SRCS_FT_PRINTF_DIR)utils/parse_utils/combination_utils/
+SRCS_FT_SPRINTF_DIR             := $(SRCS_FT_NON_STANDARD_DIR)ft_sprintf/
+SRCS_FT_SPRINTF_UTILS_DIR       := $(SRCS_FT_SPRINTF_DIR)utils/
+SRCS_FT_SPRINTF_SPECIFIER_DIR   := $(SRCS_FT_SPRINTF_DIR)utils/specifier_utils/
+SRCS_FT_SPRINTF_PARSE_DIR       := $(SRCS_FT_SPRINTF_DIR)utils/parse_utils/
+SRCS_FT_SPRINTF_COMBINATION_DIR := $(SRCS_FT_SPRINTF_DIR)utils/parse_utils/combination_utils/
 SRCS_FT_STDLIB_DIR             := src/ft_stdlib/
 SRCS_FT_STRING_DIR             := src/ft_string/
 INCS                           := include/
@@ -87,6 +92,36 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_PRINTF_PARSE_DIR), ft_pa
 	ft_parse_zero.c \
 	ft_parse_precision.c)
 SRCS_FILES                     += $(addprefix $(SRCS_FT_PRINTF_COMBINATION_DIR), ft_combination_chr.c \
+	ft_combination_str.c \
+	ft_combination_str_math_null.c \
+	ft_combination_hex.c \
+	ft_combination_hex_math.c \
+	ft_combination_int.c \
+	ft_combination_int_math.c \
+	ft_combination_int_math_zero.c \
+	ft_combination_int_math_width.c \
+	ft_combination_int_math_minus.c \
+	ft_combination_str_math.c)
+
+SRCS_FILES                     += $(addprefix $(SRCS_FT_SPRINTF_DIR), ft_sprintf.c)
+SRCS_FILES                     += $(addprefix $(SRCS_FT_SPRINTF_SPECIFIER_DIR), ft_specifier.c \
+	ft_cast_chr.c \
+	ft_cast_str.c \
+	ft_cast_hex.c \
+	ft_cast_int.c \
+	ft_cast_per.c)
+SRCS_FILES                     += $(addprefix $(SRCS_FT_SPRINTF_UTILS_DIR), ft_line_utils.c \
+	ft_str_utils.c \
+	ft_nbr_utils.c)
+SRCS_FILES                     += $(addprefix $(SRCS_FT_SPRINTF_PARSE_DIR), ft_parse_combination.c \
+	ft_parse_hash.c \
+	ft_parse_plus.c \
+	ft_parse_space.c \
+	ft_parse_minus.c \
+	ft_parse_width.c \
+	ft_parse_zero.c \
+	ft_parse_precision.c)
+SRCS_FILES                     += $(addprefix $(SRCS_FT_SPRINTF_COMBINATION_DIR), ft_combination_chr.c \
 	ft_combination_str.c \
 	ft_combination_str_math_null.c \
 	ft_combination_hex.c \
@@ -161,8 +196,8 @@ COMP_MESSAGE                   = Building C object
 #******************************************************************************#
 
 CC                             := cc
-CFLAGS                         = -Wall -Wextra -Werror -Ofast
-CPPFLAGS                       := $(addprefix -I,$(INCS)) -MMD -MP
+CFLAGS                         = -Wall -Wextra -Werror -Ofast -pedantic
+CPPFLAGS                       := $(addprefix -I,$(INCS)) -MMD -MP -DDEBUG
 DFLAGS                         := -g3
 LFLAGS                         := -march=native
 FSANITIZE                      := -O1 -fno-omit-frame-pointer -g3
@@ -194,13 +229,11 @@ endef
 define comp_objs
 	$(eval COUNT=$(shell expr $(COUNT) + 1))
 	$(COMPILE_OBJS)
-	$(SLEEP)
 	printf "[%3d%%] $(YELLOW)$(COMP_MESSAGE) $@ \r$(RESET)\n" $$(echo $$(($(COUNT) * 100 / $(words $(OBJS)))))
 endef
 
 define comp_lib
 	$(COMPILE_LIB)
-	$(SLEEP)
 	printf "$(LIB_MESSAGE)$(RESET)\n"
 endef
 
