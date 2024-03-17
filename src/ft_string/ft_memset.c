@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/11 00:10:18 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 22:50:44 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/17 04:51:51 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@
  */
 void	*ft_memset(void *s, int c, size_t n)
 {
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
 	while (n--)
-		*(unsigned char *)(s + n) = c;
-	return (s);
+		*(unsigned char *)(str + n) = c;
+	return (str);
 }

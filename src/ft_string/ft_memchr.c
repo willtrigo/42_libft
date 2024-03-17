@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 20:06:12 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 07:08:50 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/17 04:51:29 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,14 @@
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (n == '\0')
-		return (NULL);
+	unsigned char	*str;
+
+	str = (unsigned char *)s;
 	while (n--)
 	{
-		if (*(char *)s == (char)c)
-			return ((char *)s);
-		s++;
+		if (*str == (unsigned char)c)
+			return (str);
+		str++;
 	}
 	return (NULL);
 }

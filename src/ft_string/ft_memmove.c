@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/16 20:22:16 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/10 22:48:17 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/03/17 04:51:47 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,16 @@
  */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	unsigned char	*dest_temp;
+	unsigned char	*src_temp;
+
 	if (!dest && !src)
 		return (NULL);
 	if (dest < src)
 		return (ft_memcpy(dest, src, n));
+	dest_temp = (unsigned char *)dest;
+	src_temp = (unsigned char *)src;
 	while (n--)
-		*(char *)(dest + n) = *(char *)(src + n);
-	return (dest);
+		*(dest_temp + n) = *(src_temp + n);
+	return (dest_temp);
 }
