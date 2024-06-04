@@ -6,10 +6,12 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 04:52:17 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/12 06:43:07 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 03:45:34 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include "ft_default.h"
 #include "ft_non_standard/ft_non_standard.h"
 #include "ft_string.h"
 
@@ -26,5 +28,6 @@
  */
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	if (write(fd, s, ft_strlen(s)) == FAIL)
+		perror("write");
 }

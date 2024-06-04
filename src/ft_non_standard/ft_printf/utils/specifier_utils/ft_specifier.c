@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 05:59:50 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:52:41 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:00:17 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ void	ft_get_spec(t_line *format, va_list ap, t_line *line)
 		}
 		else
 		{
-			ft_chr_add(&line->str, \
-				ft_chr_new(format->str->chr), line);
+			ft_chr_add(&line->str, ft_chr_new(format->str->chr));
 			ft_format_jump(format);
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 23:38:25 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:54:40 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:01:12 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ static void	ft_get_hex(t_line *line, t_ulli hex,
 			ft_get_hex(line, hex / 16, hex_status, CHK_HEX_UP);
 		if (hex_status->active == ON)
 			ft_chr_add(&line->str, \
-				ft_chr_new(HEX_UP[hex % 16]), line);
+				ft_chr_new(HEX_UP[hex % 16]));
 	}
 	else
 	{
@@ -108,7 +108,7 @@ static void	ft_get_hex(t_line *line, t_ulli hex,
 			ft_get_hex(line, hex / 16, hex_status, CHK_HEX_LW);
 		if (hex_status->active == ON)
 			ft_chr_add(&line->str, \
-				ft_chr_new(HEX_LW[hex % 16]), line);
+				ft_chr_new(HEX_LW[hex % 16]));
 	}
 }
 

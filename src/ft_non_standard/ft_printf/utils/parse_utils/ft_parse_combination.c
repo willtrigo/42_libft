@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 19:25:55 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:58:37 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:06:25 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static t_parse_comb_struct	ft_parse_comb_init(void)
 void	ft_combination_add(t_line *line, char chr, int size)
 {
 	while (size-- > OFF)
-		ft_chr_add(&line->str, ft_chr_new(chr), line);
+		ft_chr_add(&line->str, ft_chr_new(chr));
 }
 
 void	ft_math_apply(t_line *line, t_lli prec,

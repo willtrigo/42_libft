@@ -6,12 +6,13 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 04:23:05 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/12 06:32:07 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:09:58 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_non_standard/ft_non_standard.h"
+#include <stdio.h>
 #include "ft_default.h"
+#include "ft_non_standard/ft_non_standard.h"
 
 /**
  * @brief Writes a single character to a file descriptor.
@@ -25,5 +26,6 @@
  */
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, CHAR_BYTE);
+	if (write(fd, &c, CHAR_BYTE) == FAIL)
+		perror("write");
 }

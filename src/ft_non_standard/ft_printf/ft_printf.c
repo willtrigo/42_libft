@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 02:17:33 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:44:06 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 03:58:41 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ int	ft_printf(const char *format, ...)
 static void	ft_get_format(t_line *line_format, const char *format)
 {
 	while (*format)
-		ft_chr_add(&line_format->str, ft_chr_new(*(format++)), line_format);
+		ft_chr_add(&line_format->str, ft_chr_new(*(format++)));
 }

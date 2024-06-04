@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 03:42:43 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:43:25 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 03:58:05 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,7 @@ int			ft_str_len(const char *str);
 void		ft_format_jump(t_line *format);
 t_line		ft_line_init(void);
 void		ft_chr_add(t_line_chr **line_chr,
-				t_line_chr *chr_new, t_line *line);
+				t_line_chr *chr_new);
 t_line_chr	*ft_chr_new(char chr);
 void		ft_print_line(t_line *line);
 

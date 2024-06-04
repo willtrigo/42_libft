@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:01:56 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 02:01:29 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:13:51 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	ft_combination_int_math_aux(t_line *line, t_lli nbr,
 		ft_math_apply(line, FAIL, line->width - hist->len, \
 				line->minus - hist->len);
 		return ;
-	}	
+	}
 	if (line->zero == ON)
 		ft_int_math_zero(line, nbr, hist);
 	ft_combination_int_math_aux_1(line, nbr, hist);

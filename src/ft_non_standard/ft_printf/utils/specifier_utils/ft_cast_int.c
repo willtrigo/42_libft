@@ -6,7 +6,7 @@
 /*   By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 02:14:19 by dande-je          #+#    #+#             */
-/*   Updated: 2024/03/13 01:54:32 by dande-je         ###   ########.fr       */
+/*   Updated: 2024/06/04 04:02:02 by dande-je         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void	ft_int_add(t_lli nbr, t_line *line)
 
 	nbr_new = nbr;
 	if (nbr == 0)
-		ft_chr_add(&line->str, ft_chr_new('0'), line);
+		ft_chr_add(&line->str, ft_chr_new('0'));
 	else
 	{
 		if (!nbr)
@@ -67,8 +67,7 @@ static void	ft_int_add(t_lli nbr, t_line *line)
 				nbr_new *= -1;
 			if (nbr_new > 9)
 				ft_int_add(nbr_new / 10, line);
-			ft_chr_add(&line->str, ft_chr_new(nbr_new \
-				% 10 + '0'), line);
+			ft_chr_add(&line->str, ft_chr_new(nbr_new % 10 + '0'));
 		}
 	}
 }
