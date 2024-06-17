@@ -6,7 +6,7 @@
 #    By: dande-je <dande-je@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/28 17:49:31 by dande-je          #+#    #+#              #
-#    Updated: 2024/03/17 04:17:02 by dande-je         ###   ########.fr        #
+#    Updated: 2024/06/17 01:28:16 by dande-je         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -155,6 +155,7 @@ SRCS_FILES                     += $(addprefix $(SRCS_FT_NON_STANDARD_DIR), ft_il
 	ft_strjoin.c \
 	ft_strmapi.c \
 	ft_strtod.c \
+	ft_strtoi.c \
 	ft_strtrim.c \
 	ft_substr.c )
 
